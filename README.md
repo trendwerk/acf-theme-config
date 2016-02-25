@@ -2,7 +2,7 @@
 Configure ACF for a theme. Made for WordPress.
 
 - Loads and saves ACF JSON files to `config/acf` in your theme (for VCS purposes)
-- Uses the WordPress WYSIWYG settings when using ACF's full editor
+- Uses the WordPress WYSIWYG toolbars when using ACF's full editor
 
 ## Installation
 This plugin needs Composer to manage WordPress. To add this plugin to your project's development dependencies, run:
