@@ -4,13 +4,13 @@ Configure ACF for a theme. Made for WordPress.
 ## Installation
 This plugin needs Composer to manage WordPress. To add this plugin to your project's development dependencies, run:
 ```sh
-composer require trendwerk/debug 1.0.0 --dev
+composer require trendwerk/acf-theme-config 0.1.0
 ```
 
 Or manually add it to your `composer.json`:
 ```json
-"require-dev": {
-	"trendwerk/debug": "1.0.0"
+"require": {
+	"trendwerk/acf-theme-config": "0.1.0"
 },
 ```
 
