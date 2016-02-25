@@ -1,4 +1,4 @@
-"use strict"
+'use strict';
 
 /**
  * Require dependencies
@@ -14,9 +14,10 @@ var gulp = require('gulp'),
  *
  * Concat contains extra files to concat
  */
-var files = {
-  php: ['**/*.php', '!node_modules/**/*.*'],
-};
+var files = [
+  '**/*.php',
+  '!node_modules/**/*.*'
+];
 
 /**
  * Error handling
@@ -25,16 +26,17 @@ var gulp_src = gulp.src;
 
 gulp.src = function() {
   return gulp_src.apply(gulp, arguments)
+
   .pipe(plumber(function(error) {
     beep();
   }));
-}
+};
 
 /**
  * PHP CodeSniffer (PSR)
  */
 gulp.task('phpcs', function() {
-  gulp.src(files.php)
+  return gulp.src(files)
 
   // Use cache to filter out unmodified files
   .pipe(cache('phpcs'))
@@ -48,12 +50,12 @@ gulp.task('phpcs', function() {
 
   // Log errors and fail afterwards
   .pipe(phpcs.reporter('log'))
-  .pipe(phpcs.reporter('fail'))
+  .pipe(phpcs.reporter('fail'));
 });
 
 /**
  * Watch
  */
 gulp.task('default', function() {
-  gulp.watch(files.php, ['phpcs']);
+  gulp.watch(files, ['phpcs']);
 });
