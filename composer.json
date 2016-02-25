@@ -1,0 +1,17 @@
+{
+	"name": "trendwerk/acf-theme-config",
+	"description": "Configure ACF for a theme. Made for WordPress.",
+	"type": "wordpress-muplugin",
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "Harold Angenent",
+			"email": "harold@trendwerk.nl"
+		}
+	],
+	"require": {
+		"php": ">=5.4",
+		"composer/installers": "v1.0.19",
+		"advanced-custom-fields/advanced-custom-fields-pro": "~5.3"
+    }
+}
