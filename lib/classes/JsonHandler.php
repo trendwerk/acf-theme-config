@@ -18,23 +18,28 @@ final class JsonHandler
 
     public function verifyPath()
     {
-        $this->path = get_stylesheet_directory() . '/config/acf';
+        $path = $this->getPath();
 
-        if (! is_dir($this->path)) {
-            mkdir($this->path, 0775, true);
+        if (! is_dir($path)) {
+            mkdir($path, 0775, true);
         }
     }
 
     public function load($paths)
     {
         unset($paths[0]);
-        $paths[] = $this->path;
+        $paths[] = $this->getPath();
 
         return $paths;
     }
 
     public function save($path)
     {
-        return $this->path;
+        return $this->getPath();
+    }
+
+    private function getPath()
+    {
+        return get_stylesheet_directory() . '/config/acf';
     }
 }
