@@ -8,7 +8,7 @@
  * Author: Trendwerk
  * Author URI: https://github.com/trendwerk
  *
- * Version: 0.1.1
+ * Version: 0.1.2
  */
 
 include_once('lib/autoload.php');
