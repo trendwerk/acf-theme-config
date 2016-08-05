@@ -5,7 +5,6 @@ Configure ACF for a theme. Made for WordPress.
 - Uses the WordPress WYSIWYG toolbars when using ACF's full editor
 
 ## Installation
-This plugin needs Composer to manage WordPress. To add this plugin to your project's development dependencies, run:
 ```sh
 composer require trendwerk/acf-theme-config
 ```
